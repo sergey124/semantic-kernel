@@ -26,6 +26,9 @@
     "openAIApiVersion": {
       "value": "${AZURE_OPENAI_API_VERSION=2024-08-01-preview}"
     },
+    "openAiApiKey": {
+      "value": "${AZURE_OPENAI_API_KEY}"
+    },
     "apiAppExists": {
       "value": "${SERVICE_API_RESOURCE_EXISTS=false}"
     },

@@ -32,6 +32,8 @@ param botTenantId string
 
 param openAIModel string
 param openAIApiVersion string
+param openAiApiKey string
+
 param apiAppExists bool = false
 param runningOnGh string = ''
 
@@ -100,7 +102,7 @@ module aca './aca.bicep' = {
     location: location
     logAnalyticsWorkspaceName: appin.outputs.logAnalyticsWorkspaceName
     applicationInsightsConnectionString: appin.outputs.applicationInsightsConnectionString
-    openAiApiKey: '' // Force ManId, otherwise set openAI.listKeys().key1
+    openAiApiKey: openAiApiKey
     openAiEndpoint: openAI.outputs.openAIEndpoint
     openAiModel: openAIModel
     openAiApiVersion: openAIApiVersion

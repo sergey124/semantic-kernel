@@ -101,7 +101,7 @@ resource apiContainerApp 'Microsoft.App/containerApps@2023-11-02-preview' = {
             { name: 'APPLICATIONINSIGHTS_SERVICE_NAME', value: 'api' }
             { name: 'AZURE_OPENAI_ENDPOINT', value: openAiEndpoint }
             { name: 'AZURE_OPENAI_CHAT_DEPLOYMENT_NAME', value: openAiModel }
-            { name: 'AZURE_OPENAI_API_KEY', value: '' }
+            { name: 'AZURE_OPENAI_API_KEY', value: openAiApiKey }
             { name: 'AZURE_OPENAI_API_VERSION', value: openAiApiVersion }
           ]
         }

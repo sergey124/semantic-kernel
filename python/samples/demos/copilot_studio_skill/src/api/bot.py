@@ -59,7 +59,7 @@ async def on_message(context: TurnContext, state: TurnState):
     chat_history.add_user_message(user_message)
 
     # Get the response from the semantic kernel agent (v1.22.0 and later)
-    sk_response = await agent.get_response(history=chat_history, user_input=user_message)
+    sk_response = await agent.get_response(messages=chat_history.messages)
 
     # Store the updated chat_history back into conversation state
     state.conversation["chat_history"] = chat_history
